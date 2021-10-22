@@ -5,9 +5,10 @@ import Video from './Video'
 function App() {
     const [searchTerm, setSearchTerm] = useState('');
     const [videoInfos, setVideoInfos] = useState([]);
+    const [fetching, setFetching] = useState(false);
 
     useEffect(() => {
-        if (searchTerm !== '') {
+        if (searchTerm !== '' && fetching) {
             let params = new URLSearchParams({
                 part:'snippet',
                 q: searchTerm,
@@ -15,7 +16,7 @@ function App() {
                 key:'AIzaSyDOW-h14eE1RY8qcK8FTWNQQGXnFeSvWFo',
             });
 
-            fetch('http://localhost:8888/?' + params)
+            fetch('https://youtube.googleapis.com/youtube/v3/search?' + params)
                 .then(response => response.json())
                 .then(json => {
                     const data = json.items.map(item => {
@@ -33,14 +34,18 @@ function App() {
                 })
                 .catch(error => console.error(error))
             ;
+
+            setSearchTerm('');
+            setFetching(false);
         }
-    }, [searchTerm]);
+    }, [fetching]);
 
     return ( 
         <>        
             <SearchBar 
-                searchTerm = {searchTerm}
-                setSearchTerm = {setSearchTerm}
+                searchTerm={searchTerm}
+                setSearchTerm={setSearchTerm}
+                setFetching={setFetching}
             />
             <div className='grid-container'>
                 {videoInfos.map(info => (<Video key={info.videoId} {...info}/>))}   

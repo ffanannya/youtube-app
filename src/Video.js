@@ -1,22 +1,22 @@
 import React from "react";
 
-function Video({videoId,duration,thumbnailUrl,videoTitle,channelName,channelId}) {
+function Video({videoId, thumbnailUrl, videoTitle, channelName, channelId}) {
     return (
        <div className="video-container">
             <div className="display">
-                <a href={`https://www.youtube.com/watch?v=${videoId}`}>
+                <a href={`https://www.youtube.com/watch?v=${videoId}`} target="_blank">
                     <img src={thumbnailUrl} alt="React Tutorial for Beginners" width="300" height="180" />
                 </a>
             </div>
             <div className="channel-logo">
-                <img src="https://via.placeholder.com/36x36" alt="Logo" />
+                <img src={`https://img.youtube.com/vi/${videoId}/mqdefault.jpg`} height="36" width="36" alt="Channel Logo" />
             </div>
             <div className="video-title">
-                <a href={`https://www.youtube.com/watch?v=${videoId}`}>
+                <a href={`https://www.youtube.com/watch?v=${videoId}`} target="_blank">
                     <h1>{videoTitle}</h1>
                 </a>
-                <div className="video-description">
-                    <a href={`https://www.youtube.com/channel/${decodeURI(channelId)}`}>
+                <div className="channel-description">
+                    <a href={`https://www.youtube.com/channel/${decodeURI(channelId)}`} target="_blank">
                         <span className="channel-name">{channelName}</span>
                     </a>
                 </div>

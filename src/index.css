@@ -36,18 +36,17 @@ div.video-container {
   color: #000;
 }
 
-.video-title .video-description {
+.video-title .channel-description {
   margin: 2px 0px 0px 50px;
 }
 
-.container .display span {
+/*.video-container .display a span {
   background-color: darkgray;
   padding: 4px;
-}
+}*/
 
 div.display {
   width: 300px;
-  position: relative;
 }
 
 div.display a {
@@ -55,19 +54,6 @@ div.display a {
   margin: 5px;
 }
 
-.display span.duration {
-  background-color: black;
-  color: #eee;
-  position: absolute;
-  right: 0px;
-  bottom: 10px;
-  padding: 2px;
-}
-
-span.view-count,
-span.upload-time {
-  color: #777;
-}
 
 .grid-container {
   margin: 0 150px 0 150px;
@@ -85,7 +71,7 @@ span.upload-time {
 input {
   display: flex;
   flex-wrap: wrap;
-  width: 85%;
+  width: 84%;
   margin: 0 auto;
   border: none;
   border-radius: 5px;
@@ -107,4 +93,11 @@ input:focus {
   background: rgba(197, 195, 195, 0.829);
   color: black;
   outline: none;
+}
+.video-title .channel-description a {
+  color: rgb(75, 74, 74);
+}
+.video-title .channel-description a:hover {
+  color: #000;
+  
 }
