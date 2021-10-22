@@ -1,25 +1,24 @@
 import React from "react";
 
-function Video() {
+function Video({videoId,duration,thumbnailUrl,videoTitle,channelName,channelId}) {
     return (
        <div className="video-container">
             <div className="display">
-                <a href="https://www.youtube.com/watch?v=zcSOU7Fjq80">
-                    <img src="https://via.placeholder.com/300x180" alt="React Tutorial for Beginners" />
+                <a href={`https://www.youtube.com/watch?v=${videoId}`}>
+                    <img src={thumbnailUrl} alt="React Tutorial for Beginners" width="300" height="180" />
                 </a>
-                <span className="duration">2:00</span>
             </div>
             <div className="channel-logo">
                 <img src="https://via.placeholder.com/36x36" alt="Logo" />
             </div>
             <div className="video-title">
-                <a href="https://www.youtube.com/watch?v=zcSOU7Fjq80">
-                    <h1>React Tutorial for Beginners</h1>
+                <a href={`https://www.youtube.com/watch?v=${videoId}`}>
+                    <h1>{videoTitle}</h1>
                 </a>
                 <div className="video-description">
-                    <span className="channel-name">Learn React</span>
-                    <span className="view-count">1.5k views .</span>
-                    <span className="upload-time">1 month ago</span>
+                    <a href={`https://www.youtube.com/channel/${decodeURI(channelId)}`}>
+                        <span className="channel-name">{channelName}</span>
+                    </a>
                 </div>
             </div>
         </div> 
