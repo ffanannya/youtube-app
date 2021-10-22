@@ -1,6 +1,6 @@
 import {useEffect, useState} from 'react';
-import SearchBar from './SearchBar'
-import Video from './Video'
+import SearchBar from './SearchBar';
+import Video from './Video';
 
 function App() {
     const [searchTerm, setSearchTerm] = useState('');
@@ -25,7 +25,6 @@ function App() {
                             videoTitle: item.snippet.title,
                             channelId: item.snippet.channelId,
                             thumbnailUrl: item.snippet.thumbnails.medium.url,
-                            duration:'2:30',
                             channelName: item.snippet.channelTitle    
                         };
                     });
