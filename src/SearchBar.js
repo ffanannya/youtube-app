@@ -4,7 +4,7 @@ function SearchBar({searchTerm, setSearchTerm, setFetching}) {
     const onKeyPress = (e) => {
         if (e.key === 'Enter') {
             setFetching(true);
-        }
+        };
     };
 
     return ( 
@@ -15,7 +15,7 @@ function SearchBar({searchTerm, setSearchTerm, setFetching}) {
             onKeyPress = {onKeyPress}
             onChange ={(e) => setSearchTerm(e.target.value)}
         />
-    )
+    );
 };
 
 export default SearchBar;

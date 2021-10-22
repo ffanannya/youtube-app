@@ -9,7 +9,9 @@ function Video({videoId, thumbnailUrl, videoTitle, channelName, channelId}) {
                 </a>
             </div>
             <div className="channel-logo">
-                <img src={`https://img.youtube.com/vi/${videoId}/mqdefault.jpg`} height="36" width="36" alt="Channel Logo" />
+                <a href={`https://www.youtube.com/channel/${decodeURI(channelId)}`} target="_blank">
+                    <img src={`https://img.youtube.com/vi/${videoId}/mqdefault.jpg`} height="36" width="36" alt="Channel Logo" />
+                </a>
             </div>
             <div className="video-title">
                 <a href={`https://www.youtube.com/watch?v=${videoId}`} target="_blank">
