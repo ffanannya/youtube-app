@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Getting Started with Youtube Search
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was built using React and Google's YouTube Data API v3
 
 ## Available Scripts
 
