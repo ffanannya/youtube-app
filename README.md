@@ -1,12 +1,10 @@
-# Getting Started with Youtube Search
+# Youtube Search (React.js)
 
-This project was built using React and Google's YouTube Data API v3
+## Description
 
-## Available Scripts
+A simple application built using React.js CLI to search YouTube videos against given search term(s). Here, Google’s
+YouTube Data API v3 is used.
 
-In the project directory, you can run:
+## `npm start`
 
-### `npm start`
-
-Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
